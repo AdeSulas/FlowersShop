@@ -1,0 +1,351 @@
+:root {
+    --color-bg-1: #13005A;
+    --color-bg-2: #182747;
+    --color-bg-3: #053F5E;
+    --color-bg-4: #00005C;
+    --color-bg-6: #150050;
+
+    --primary: #d1e8ea;
+    --secondary: #249096;
+    --tertiary: #2baab1;
+    --quaternary: #139ca4;
+
+    --color-bg-5: #FF7600;
+
+    --transition: all 0.3s ease-in-out;
+    --transition: all 0.3s linear infinite;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* navbar nav */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background: var(--tertiary);
+    z-index: 99999;
+}
+
+.navbar .navbar-logo {
+    font-style: italic;
+    font-weight: 800;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar .navbar-link a {
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 0 1rem;
+    color: var(--primary);
+}
+
+.navbar .navbar-link a:hover {
+    color: #ffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .navbar-icon iconify-icon {
+    font-size: 1.5rem;
+}
+
+/* header start */
+header {
+    background: var(--primary);
+    height: 100vh;
+    box-shadow: 1rem 1rem 2rem 2rem var(--primary);
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    padding: 9rem 7%;
+}
+
+
+.header-left img {
+    width: 15rem;
+    height: 20rem;
+    border: 0.5rem solid var(--tertiary);
+    box-shadow: 0 1rem 1rem rgb(0, 0, 0, 0.3);
+    position: absolute;
+}
+
+.header-img {
+    transform: rotate(-10deg);
+    transition: all 0.3s ease-in-out;
+    margin-top: 0.5rem;
+}
+
+.header-img:nth-child(2) {
+    transform: rotate(20deg);
+    margin-left: 11rem;
+    margin-top: 5rem;
+}
+
+.header-left:hover .header-img {
+    transform: rotate(0);
+}
+
+.header-left:hover .header-img:nth-child(2) {
+    margin-top: 0;
+    margin-left: 18rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-right {
+    margin-right: -2rem;
+    margin-top: 4rem;
+}
+
+.empty {
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.header-empty {
+    width: 10rem;
+    height: 2rem;
+    border-radius: 5rem;
+    background: var(--tertiary);
+    margin-right: 1rem;
+    box-shadow: inset 0 0.7rem 1.3rem var(--primary);
+    border: 1px solid var(--secondary), var(--tertiary);
+}
+
+.header-right h1 {
+    text-transform: capitalize;
+}
+
+/* about start */
+.about-container {
+    display: grid;
+    grid-template-columns: 55% 50%;
+    margin: 5rem;
+    padding-top: 7rem;
+}
+
+.about-left {
+    text-transform: capitalize;
+}
+
+.about-left-line {
+    background: var(--secondary);
+    width: 10rem;
+    height: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.about-img-bg {
+    background: var(--primary);
+    width: 36rem;
+    height: 19rem;
+    position: absolute;
+    margin-top: 3rem;
+}
+
+.about-right img {
+    width: 30rem;
+    height: 25rem;
+    position: relative;
+    margin-left: 2rem;
+    box-shadow: 0 1rem 1rem rgb(0, 0, 0, 0.2);
+    animation: myanim 1.5s ease-in;
+}
+
+@keyframes myanim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* flowers start */
+.flowers {
+    padding-top: 8rem;
+    text-transform: capitalize;
+}
+.flowers-container {
+    text-transform: capitalize;
+}
+
+.flowers {
+    text-align: center;
+    margin-top: 10rem;
+    line-height: 1.5rem;
+}
+
+.flowers-line {
+    background: var(--secondary);
+    width: 20rem;
+    height: 0.3rem;
+    margin: auto;
+    line-height: 2rem;
+}
+
+.flowers-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 5rem 0 5rem;
+}
+
+.flowers-left .flower-circle {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin: 2rem;
+}
+
+.flowers-left .flower-circle img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.flower-text {
+    line-height: 0.3rem;
+    align-items: center;
+}
+
+.flowers-right .flower-circle {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin: 2rem;
+}
+
+.flowers-right .flower-circle img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+/* contact start */
+.contact {
+    text-transform: capitalize;
+    padding-top: 5rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: var(--secondary);
+    margin: 2rem 5rem;
+    text-align: center;
+}
+
+.default {
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-form iconify-icon {
+    font-size: 1.2rem;
+    align-items: center;
+    color: white;
+}
+
+.contact-form input {
+    width: 22rem;
+    height: 3rem;
+    margin: 0.6rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    background: var(--primary);
+    box-shadow: 0 0.5rem 0.5rem var(--color-bg-3);
+}
+
+.contact-form-btn button {
+    padding: 0.7rem 1.3rem;
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.1rem;
+    margin: 2rem;
+    background: var(--primary);
+    box-shadow: 0 0.5rem 0.5rem var(--color-bg-3);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-form-btn button:hover {
+    background-color: var(--quaternary);
+    color: white;
+    box-shadow: 0 0 0;
+}
+
+/* footer start */
+footer{
+    background: var(--tertiary);
+    height: 30vh;
+    margin-top: 8rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    text-align: center;
+    align-items: center;
+}
+
+.footer-center {
+    text-transform: capitalize;
+    margin: 1rem;
+    line-height: 2rem;
+}
+
+.footer-center .footer-center-icon {
+    margin-bottom: -2rem;
+}
+
+.footer-center .footer-center-icon iconify-icon {
+    font-size: 1rem;
+    color: var(--primary);
+    margin-bottom: -0.5rem;
+}
+
+.footer-center .footer-center-link a{
+    text-decoration: none;
+    color: white;
+    padding: 0 0.5rem;
+}
+
+.footer-right {
+    margin-top: 2rem;
+}
+
+.footer-right-contact {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem;
+    align-items: center;
+}
+
+.footer-right-contact iconify-icon{
+    margin-right: 0.5rem;
+}
+
+/* ============= MEDIA QUERIS ============ */
+@media screen and (min-width:668) {
+    .contact-form input {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
